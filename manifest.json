@@ -1,0 +1,11 @@
+{
+  "background_color": "#000000",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "andristore-neon.vercel",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "andristore-neon.vercel",
+  "start_url": "/",
+  "theme_color": "#ffffff"
+}
