@@ -396,7 +396,7 @@
             const serviceName = services[serviceType].label;
             const pkg = services[serviceType].packages[packageIndex];
             
-            const message = `Halo Kak Andri El! 👋%0A%0ASaya mau order:%0A🔹 *Layanan:* ${serviceName}%0A🔹 *Paket:* ${pkg.name}%0A🔹 *Harga:* Rp${pkg.price.toLocaleString('id-ID')}%0A%0AMohon diproses ya kak! 🚀`;
+            const message = `Halo Kak Andri El! %0A%0ASaya mau order:%0A *Layanan:* ${serviceName}%0A *Paket:* ${pkg.name}%0A *Harga:* Rp${pkg.price.toLocaleString('id-ID')}%0A%0AMohon diproses ya kak!`;
 
             window.open(`https://wa.me/${082351132293}?text=${message}`, '_blank');
         }
