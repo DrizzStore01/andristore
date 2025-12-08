@@ -1,124 +1,170 @@
 body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0f172a;
-            user-select: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-        }
-        .tiktok-gradient {
-            background: linear-gradient(to right, #00f2ea, #ff0050);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 242, 234, 0.3);
-        }
-        .glass-effect {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0f172a;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #334155;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #475569;
-        }
-        
-        /* Watermark dan Proteksi */
-        .watermark-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(255, 0, 80, 0.02) 10px,
-                rgba(255, 0, 80, 0.02) 20px
-            );
-            pointer-events: none;
-            z-index: 9998;
-        }
-        
-        .dynamic-watermark {
-            position: fixed;
-            color: rgba(255, 0, 80, 0.08);
-            font-size: 14px;
-            pointer-events: none;
-            z-index: 9999;
-            transform: rotate(-45deg);
-        }
-        
-        .warning-toast {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #ff0050;
-            color: white;
-            padding: 15px 25px;
-            border-radius: 10px;
-            z-index: 10000;
-            box-shadow: 0 5px 15px rgba(255, 0, 80, 0.3);
-            animation: slideIn 0.3s ease;
-            font-weight: 600;
-            max-width: 300px;
-        }
-        
-        @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        
-        @keyframes slideOut {
-            from { transform: translateX(0); opacity: 1; }
-            to { transform: translateX(100%); opacity: 0; }
-        }
-        
-        /* Blokir teks selection */
-        .no-selection {
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        
-        /* Animasi untuk blob */
-        @keyframes blob {
-            0% { transform: translate(0px, 0px) scale(1); }
-            33% { transform: translate(30px, -50px) scale(1.1); }
-            66% { transform: translate(-20px, 20px) scale(0.9); }
-            100% { transform: translate(0px, 0px) scale(1); }
-        }
-        
-        .animate-blob {
-            animation: blob 7s infinite;
-        }
-        
-        .animation-delay-2000 {
-            animation-delay: 2s;
-        }
-        
-        .animation-delay-4000 {
-            animation-delay: 4s;
-        }
-        
-        /* Fokus untuk accessibility */
-        .focus-safe:focus {
-            outline: 2px solid #00f2ea;
-            outline-offset: 2px;
-        }
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f172a;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.tiktok-gradient {
+    background: linear-gradient(to right, #00f2ea, #ff0050);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 242, 234, 0.3);
+}
+.glass-effect {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* Watermark dan Proteksi */
+.watermark-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 0, 80, 0.02) 10px,
+        rgba(255, 0, 80, 0.02) 20px
+    );
+    pointer-events: none;
+    z-index: 9998;
+}
+
+.dynamic-watermark {
+    position: fixed;
+    color: rgba(255, 0, 80, 0.08);
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 9999;
+    transform: rotate(-45deg);
+}
+
+.warning-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ff0050;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    z-index: 10000;
+    box-shadow: 0 5px 15px rgba(255, 0, 80, 0.3);
+    animation: slideIn 0.3s ease;
+    font-weight: 600;
+    max-width: 300px;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOut {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Blokir teks selection */
+.no-selection {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Animasi untuk blob */
+@keyframes blob {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+    animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+/* Fokus untuk accessibility */
+.focus-safe:focus {
+    outline: 2px solid #00f2ea;
+    outline-offset: 2px;
+}
+
+/* NEW: Styles untuk Pilihan Layanan */
+.service-card.active {
+    border-color: #00f2ea;
+    background-color: rgba(0, 242, 234, 0.1);
+    box-shadow: 0 0 15px rgba(0, 242, 234, 0.2);
+}
+
+/* Scrollbar Kustom untuk Daftar Harga */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #00f2ea;
+}
+
+/* Styles untuk Pilihan Layanan */
+.service-card.active {
+    border-color: #00f2ea;
+    background-color: rgba(0, 242, 234, 0.1);
+    box-shadow: 0 0 15px rgba(0, 242, 234, 0.2);
+}
+.animate-fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
